@@ -1,0 +1,52 @@
+First run: 100000 1 150
+
+MergeSort:
+real	0m0.160s
+user	0m0.300s
+sys	0m0.051s
+
+QuickSort:
+real	0m0.218s
+user	0m0.366s
+sys	0m0.040s
+
+Second run: 10000000 1 200
+
+MergeSort:
+real	0m23.206s
+user	0m3.083s
+sys	0m0.565s
+
+QuickSort: 
+Received A StackOverflow error HAHA!
+
+Let's try a smaller number...
+
+Third run: 5000000 1 250
+
+MergeSort:
+real	0m12.768s
+user	0m1.696s
+sys	0m0.339s
+
+QuickSort:
+ANOTHER STACK OVERFLOW!
+
+Lets try an even smaller number...
+
+Fourth run: 255750 1 300
+
+MergeSort:
+real	0m0.642s
+user	0m0.374s
+sys	0m0.073s
+
+QuickSort:
+real	0m0.386s
+user	0m0.545s
+sys	0m0.065s:
+
+Conclusions:
+Merge sort is on average much better!
+QuickSort may outperform Mergesort when there is a smaller input size say under 500000, but with the chance to go O(n^2) it really does not outperform. Overall, if I were to pick between these two, I would always pick merge sort because of its consistency with small or large input, always performing at O(nlogn).
+

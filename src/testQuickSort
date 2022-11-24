@@ -1,0 +1,5 @@
+java QuickSort 16 1 100 >qsorting_out.txt
+java QuickSort 20 -30 40 >>qsorting_out.txt
+java QuickSort 33 12 68 >>qsorting_out.txt
+java QuickSort 5 -3 8 >>qsorting_out.txt
+java QuickSort 41 0 30 >>qsorting_out.txt

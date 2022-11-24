@@ -1,0 +1,5 @@
+java MergeSort 16 1 100 >sorting_out.txt
+java MergeSort 20 -30 40 >>sorting_out.txt
+java MergeSort 33 12 68 >>sorting_out.txt
+java MergeSort 5 -3 8 >>sorting_out.txt
+java MergeSort 41 0 30 >>sorting_out.txt

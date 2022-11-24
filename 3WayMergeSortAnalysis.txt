@@ -1,0 +1,56 @@
+
+Suppose the 3 way merge sort was given the following 9 numbers:
+ 8 1 4 5 3 2 0 6 7
+
+The first step:
+8 1 5 | 6  4  2 | 0 3 7
+
+The second step:
+1 5 8 | 2 4 6 | 0 3 7
+at most 2 comparisons per section or n-1
+6 comparisons total
+
+The third step:
+0 1 2 3 4 5 6 7 8
+The worst merge would happen when we first compare
+1-2-0: 2
+1-2-3: 2
+5-2-3: 2
+5-4-3: 2
+5-4-7: 2
+5-6-7: 2
+8-6-7: 2
+8-7:   1
+15 total comparisons or 2n-3 comparisons.
+
+Best case:
+1 2 3 4 5 6 7 8 9
+1 2 3 | 4 5 6 | 7 8 9
+6 comparisons n-1 comparisons
+
+1-4-7 :2
+2-4-7 :2
+3-4-7 :2
+4-7   :1
+5-7   :1
+6-7   :1
+Comparisons: 9 - much less than 2n-3
+Now lets right this in recurrence relation. 
+
+T(N) = 0 + T(N/3) + T(N/9) + T(N/27) + 2n-3 = 
+
+T(27)= 3T(9) + 2(27)-3	
+T(9) = 3T(3) + 2(9)-3
+T(3) = 3T(1) + 2(3)-3      	
+T(1) = 0 //(base)
+
+
+T(N) = 3T(n/3)+2n-3 = 2nlog(n) where log is of base 3.
+But with big O, we drop the constant so it becomes
+Time Complexity = O(nlogn).
+
+Therefore, the worst number of comparisons that could be made are nlog(n)+2n-3.
+The worst case is making 2n-3 comparisons at every level and doing that nlog(n) times.
+The best case would be T(1) where we do not have to do any comparisons at all.
+
+In Conclusion, even though 3-way merge sort cuts the collection into more pieces, it does not outperform 2-way merge sort because it has to make a lot more comparisons than two-way. Two-way merge sort performs at worst nlogb2(n) - 2^(logn)+1 comparisons. As far as number of comparisons go, 2-way merge sort is more efficient because at every level it can make n-1 comparisons where 3-way can make 2n-3 comparisons. 3-way merge sort uses more comparisons so being that it will have a 3rd split, it will do an extra 3rd of comparisons. However, both algorithms run at O(nlogn) time complexity so there is not much difference between the two, other than a constant which is the comparisons.  
